@@ -402,7 +402,8 @@ textarea {
 
 .expertise-grid,
 .projects-grid,
-.skills-grid {
+.skills-grid,
+.articles-grid {
   display: grid;
   gap: 1.2rem;
 }
@@ -433,6 +434,49 @@ textarea {
   max-width: 100%;
   padding: 28px;
   box-sizing: border-box;
+}
+
+.articles-grid {
+  grid-template-columns: minmax(0, 1fr);
+  width: 100%;
+  max-width: 960px;
+  margin: 2.5rem auto 0;
+}
+
+.article-card {
+  padding: 1.7rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-line);
+  background: linear-gradient(180deg, rgba(16, 42, 67, 0.82), rgba(9, 16, 27, 0.88));
+  box-shadow: var(--shadow-card);
+}
+
+.article-card h3 {
+  margin: 0 0 0.75rem;
+  font-family: "Outfit", sans-serif;
+}
+
+.article-card p {
+  margin-bottom: 1rem;
+}
+
+.article-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  padding: 0;
+  margin: 1.5rem 0 1.7rem;
+  list-style: none;
+}
+
+.article-tags li {
+  padding: 0.55rem 0.9rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  background: rgba(212, 175, 55, 0.08);
+  color: var(--color-muted);
+  font-size: 0.92rem;
+  line-height: 1;
 }
 
 .project-card h3,
@@ -639,7 +683,8 @@ textarea {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .projects-grid {
+  .projects-grid,
+  .articles-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
@@ -705,7 +750,8 @@ textarea {
 }
 
 @media (max-width: 768px) {
-  .projects-grid {
+  .projects-grid,
+  .articles-grid {
     grid-template-columns: 1fr;
   }
 
