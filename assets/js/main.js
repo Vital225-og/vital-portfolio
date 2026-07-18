@@ -2,7 +2,7 @@ const menuToggle = document.querySelector(".menu-toggle");
 const siteNav = document.querySelector(".site-nav");
 const navLinks = document.querySelectorAll(".nav-link");
 const revealItems = document.querySelectorAll(".reveal");
-const sections = document.querySelectorAll("section[id]");
+const sections = document.querySelectorAll("main section[id]");
 
 if (menuToggle && siteNav) {
   menuToggle.addEventListener("click", () => {
@@ -15,6 +15,17 @@ if (menuToggle && siteNav) {
       siteNav.classList.remove("is-open");
       menuToggle.setAttribute("aria-expanded", "false");
     });
+  });
+
+  document.addEventListener("click", (event) => {
+    if (window.innerWidth > 820) {
+      return;
+    }
+
+    if (!siteNav.contains(event.target) && !menuToggle.contains(event.target)) {
+      siteNav.classList.remove("is-open");
+      menuToggle.setAttribute("aria-expanded", "false");
+    }
   });
 }
 
@@ -31,7 +42,7 @@ if ("IntersectionObserver" in window) {
       });
     },
     {
-      threshold: 0.18,
+      threshold: 0.16,
     }
   );
 
@@ -48,12 +59,9 @@ if ("IntersectionObserver" in window) {
   const sectionObserver = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
-        if (!entry.isIntersecting) {
-          return;
+        if (entry.isIntersecting) {
+          setActiveNavLink(entry.target.id);
         }
-
-        const currentId = entry.target.id;
-        setActiveNavLink(currentId);
       });
     },
     {

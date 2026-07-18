@@ -1,89 +1,56 @@
-# Portfolio personnel - Vital Coulibaly
+# Portfolio personnel - COULIBALY Tiomitchin Vital
 
-Landing page professionnelle, moderne et responsive pour présenter Vital Coulibaly comme bâtisseur tech africain, avec un positionnement centré sur le génie logiciel, l'intelligence artificielle et le machine learning.
+Portfolio statique orienté recrutement pour présenter COULIBALY Tiomitchin Vital comme Data Analyst capable de transformer des données en indicateurs, dashboards, analyses et outils d’aide à la décision.
 
-## Présentation du projet
+## Positionnement
 
-Ce projet est un portfolio personnel statique conçu pour valoriser :
+- Data analysis
+- Nettoyage de données
+- EDA et visualisation
+- Dashboards et reporting
+- Machine Learning appliqué
+- NLP, LLM et RAG
+- Risk analysis et fraud detection
 
-- le profil de Vital Coulibaly
-- ses domaines d'expertise
-- ses projets sélectionnés
-- ses compétences techniques
-- sa vision et son parcours
-- ses points de contact essentiels
+## Contenu du site
 
-## Objectif du portfolio
+- Hero avec positionnement, liens sociaux et bouton CV
+- Section valeur
+- Projets sélectionnés
+- Expériences
+- Compétences
+- Parcours
+- Distinctions
+- Contact
 
-Construire une page d'accueil claire, ambitieuse et crédible pour présenter Vital Coulibaly comme un bâtisseur tech orienté produit, web, data et IA appliquée, avec un ancrage fort sur les besoins réels en Afrique.
+## Liens clés
 
-## Technologies utilisées
+- Portfolio: https://vital-coulibaly.netlify.app/
+- GitHub: https://github.com/Vital225-og
+- LinkedIn: https://www.linkedin.com/in/vital-coulibaly-00a544346
+- Novaris AI: https://magnificent-genie-be22ca.netlify.app/
+- CineMatch AI: https://cinematch-ai-hackathon.streamlit.app/
+- AIPROMMER: https://aiprommer.netlify.app/
 
-- HTML5
-- CSS3
-- JavaScript vanilla
+## CV
 
-Le projet ne dépend d'aucun framework ni d'aucune librairie JavaScript externe. Il est prêt pour un hébergement statique simple.
+Le bouton du hero pointe vers:
 
-## Structure du projet
+- `assets/docs/Coulibaly_Vital_Data_Analyst_en.pdf`
 
-```text
-.
-|-- index.html
-|-- README.md
-`-- assets
-    |-- css
-    |   `-- style.css
-    |-- docs
-    |   `-- Vital_Coulibaly_Portfolio_Professionnel.pdf
-    |-- img
-    `-- js
-        `-- main.js
+Si tu veux remplacer ce fichier par une version FR plus récente, conserve le même emplacement ou ajuste le lien dans `index.html`.
+
+## Développement local
+
+Le site est une landing page statique:
+
+1. Ouvrir `index.html` dans un navigateur
+2. Ou lancer un serveur local de ton choix
+
+## Build
+
+Le script de build vérifie la présence des sections et des liens essentiels.
+
+```bash
+npm run build
 ```
-
-## Ouvrir le site localement
-
-1. Ouvrir le dossier du projet dans VS Code ou dans votre explorateur de fichiers.
-2. Ouvrir `index.html` directement dans un navigateur.
-
-Option recommandée :
-
-- utiliser une extension comme Live Server dans VS Code pour recharger automatiquement la page pendant les modifications
-
-## Préparation au déploiement
-
-Le projet est compatible avec :
-
-- GitHub Pages
-- Netlify
-
-Points déjà prêts pour un déploiement statique :
-
-- aucun build requis
-- aucune dépendance à installer
-- chemins de fichiers locaux simples
-- structure légère et portable
-
-### Déployer sur GitHub Pages
-
-1. Pousser le projet sur un dépôt GitHub.
-2. Ouvrir les paramètres du dépôt.
-3. Activer GitHub Pages depuis la branche principale.
-4. Choisir la racine du projet comme source de publication si nécessaire.
-
-### Déployer sur Netlify
-
-1. Créer un nouveau site depuis un dépôt GitHub.
-2. Sélectionner ce projet.
-3. Laisser le champ de build vide.
-4. Définir le dossier de publication sur la racine du projet.
-
-## À personnaliser avant mise en ligne
-
-- photo professionnelle
-- lien GitHub réel
-- lien LinkedIn réel
-- numéro WhatsApp si Vital souhaite l'afficher
-- CV final
-- visuels dans `assets/img/`
-- documents complémentaires dans `assets/docs/`
