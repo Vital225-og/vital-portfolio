@@ -3,6 +3,7 @@ const siteNav = document.querySelector(".site-nav");
 const navLinks = document.querySelectorAll(".nav-link");
 const revealItems = document.querySelectorAll(".reveal");
 const sections = document.querySelectorAll("main section[id]");
+const MEDIUM_URL = "";
 
 if (menuToggle && siteNav) {
   menuToggle.addEventListener("click", () => {

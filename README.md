@@ -36,9 +36,9 @@ Portfolio statique orienté recrutement pour présenter COULIBALY Tiomitchin Vit
 
 Le bouton du hero pointe vers:
 
-- `assets/docs/Coulibaly_Vital_Data_Analyst_en.pdf`
+- `assets/docs/Coulibaly_Vital_Data_Analyst_fr.pdf`
 
-Si tu veux remplacer ce fichier par une version FR plus récente, conserve le même emplacement ou ajuste le lien dans `index.html`.
+Si tu veux remplacer ce fichier par une version plus récente, conserve le même emplacement ou ajuste le lien dans `index.html`.
 
 ## Développement local
 
