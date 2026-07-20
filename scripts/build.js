@@ -19,17 +19,25 @@ const requiredSnippets = [
   'Me contacter par email',
   'href="https://magnificent-genie-be22ca.netlify.app/"',
   'href="https://cinematch-ai-hackathon.streamlit.app/"',
-  'href="assets/docs/Coulibaly_Vital_Data_Analyst_en.pdf"',
+  'href="assets/docs/Coulibaly_Vital_Data_Analyst_fr.pdf"',
   'target="_blank"',
   'rel="noopener noreferrer"',
 ];
 
 const missing = requiredSnippets.filter((snippet) => !html.includes(snippet));
+const forbiddenSnippets = ["étudiant", "Étudiant", "junior", "Junior", "BI Analyst"];
+const forbiddenMatches = forbiddenSnippets.filter((snippet) => html.includes(snippet));
 
-if (missing.length > 0) {
+if (missing.length > 0 || forbiddenMatches.length > 0) {
   console.error("Build validation failed.");
-  console.error("Missing snippets:");
-  missing.forEach((snippet) => console.error(`- ${snippet}`));
+  if (missing.length > 0) {
+    console.error("Missing snippets:");
+    missing.forEach((snippet) => console.error(`- ${snippet}`));
+  }
+  if (forbiddenMatches.length > 0) {
+    console.error("Forbidden snippets:");
+    forbiddenMatches.forEach((snippet) => console.error(`- ${snippet}`));
+  }
   process.exit(1);
 }
 

@@ -1,15 +1,15 @@
 :root {
-  --bg: #07111f;
-  --bg-soft: #0c1729;
-  --surface: rgba(13, 24, 41, 0.82);
-  --surface-strong: rgba(16, 31, 53, 0.92);
-  --surface-line: rgba(187, 204, 227, 0.12);
-  --text: #f5f7fb;
-  --muted: rgba(245, 247, 251, 0.78);
-  --muted-strong: rgba(245, 247, 251, 0.9);
-  --accent: #82d4ff;
-  --accent-2: #7ef0c0;
-  --accent-3: #e8c56a;
+  --bg: #0f172a;
+  --bg-soft: #111827;
+  --surface: rgba(17, 24, 39, 0.86);
+  --surface-strong: rgba(30, 41, 59, 0.96);
+  --surface-line: rgba(203, 213, 225, 0.12);
+  --text: #f8fafc;
+  --muted: #cbd5e1;
+  --muted-strong: #e2e8f0;
+  --accent: #6366f1;
+  --accent-2: #7c3aed;
+  --accent-3: #93c5fd;
   --shadow: 0 24px 80px rgba(1, 6, 16, 0.42);
   --shadow-soft: 0 16px 40px rgba(1, 6, 16, 0.24);
   --radius-xl: 34px;
@@ -32,13 +32,13 @@ html {
 
 body {
   margin: 0;
-  font-family: "Manrope", system-ui, sans-serif;
+  font-family: "Inter", system-ui, sans-serif;
   color: var(--text);
   background:
-    radial-gradient(circle at 10% 10%, rgba(130, 212, 255, 0.18), transparent 28%),
-    radial-gradient(circle at 85% 14%, rgba(126, 240, 192, 0.14), transparent 24%),
-    radial-gradient(circle at 50% 100%, rgba(232, 197, 106, 0.08), transparent 30%),
-    linear-gradient(180deg, #06101c 0%, var(--bg) 42%, #050b14 100%);
+    radial-gradient(circle at 10% 10%, rgba(99, 102, 241, 0.2), transparent 28%),
+    radial-gradient(circle at 85% 14%, rgba(124, 58, 237, 0.16), transparent 24%),
+    radial-gradient(circle at 50% 100%, rgba(59, 130, 246, 0.08), transparent 30%),
+    linear-gradient(180deg, #020617 0%, var(--bg) 42%, #020617 100%);
   min-height: 100vh;
 }
 
@@ -97,6 +97,7 @@ textarea {
 .header-inner {
   min-height: 84px;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
@@ -117,7 +118,7 @@ textarea {
   border-radius: 14px;
   background: linear-gradient(135deg, rgba(130, 212, 255, 0.95), rgba(126, 240, 192, 0.85));
   color: #07111f;
-  font-family: "Space Grotesk", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 700;
   box-shadow: 0 10px 24px rgba(130, 212, 255, 0.2);
 }
@@ -129,7 +130,7 @@ textarea {
 }
 
 .brand-mark__text strong {
-  font-family: "Space Grotesk", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 1rem;
   letter-spacing: 0.01em;
 }
@@ -143,6 +144,40 @@ textarea {
   display: flex;
   align-items: center;
   gap: 1.1rem;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.header-social-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 0.55rem 0.8rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--muted-strong);
+  font-size: 0.92rem;
+  font-weight: 600;
+  transition: transform var(--transition), border-color var(--transition), background var(--transition), color var(--transition);
+}
+
+.header-social-link:hover,
+.header-social-link:focus-visible {
+  transform: translateY(-1px);
+  border-color: rgba(99, 102, 241, 0.3);
+  background: rgba(99, 102, 241, 0.08);
+  color: var(--text);
+}
+
+.header-cv {
+  min-height: 40px;
 }
 
 .nav-link {
@@ -213,7 +248,7 @@ textarea {
 .hero-copy h1,
 .section-heading h2 {
   margin: 0;
-  font-family: "Space Grotesk", sans-serif;
+  font-family: "Poppins", sans-serif;
   line-height: 1.04;
   letter-spacing: -0.05em;
 }
@@ -225,7 +260,7 @@ textarea {
 
 .hero-title {
   margin: 1rem 0 0;
-  font-family: "Space Grotesk", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: clamp(1.05rem, 2vw, 1.5rem);
   color: var(--muted-strong);
 }
@@ -330,7 +365,7 @@ textarea {
 
 .proof-card strong {
   display: block;
-  font-family: "Space Grotesk", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 1.25rem;
   color: #fff;
 }
@@ -387,7 +422,7 @@ textarea {
 .award-card h3,
 .timeline-card h3,
 .section-heading h2 {
-  font-family: "Space Grotesk", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .hero-sidecard h2 {
@@ -480,7 +515,7 @@ textarea {
   border-radius: 14px;
   background: linear-gradient(135deg, rgba(130, 212, 255, 0.16), rgba(126, 240, 192, 0.18));
   color: var(--accent);
-  font-family: "Space Grotesk", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 700;
 }
 
@@ -801,6 +836,28 @@ textarea {
   flex-wrap: wrap;
 }
 
+.footer-copy {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.footer-links {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: var(--muted);
+  font-weight: 600;
+  transition: color var(--transition);
+}
+
+.footer-links a:hover,
+.footer-links a:focus-visible {
+  color: var(--text);
+}
+
 .footer-inner p {
   margin: 0;
 }
@@ -826,6 +883,10 @@ textarea {
     grid-template-columns: 1fr;
   }
 
+  .header-actions {
+    display: none;
+  }
+
   .hero-panel {
     max-width: 620px;
   }
@@ -841,6 +902,10 @@ textarea {
 @media (max-width: 820px) {
   .menu-toggle {
     display: inline-block;
+  }
+
+  .header-actions {
+    display: none;
   }
 
   .site-nav {
